@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.List;
  * Created by yonghuo.chen on 16/10/7.
  */
 @Service
+@Transactional
 public class UserServiceImpl  implements UserService {
 
         @Autowired
@@ -89,7 +91,7 @@ public class UserServiceImpl  implements UserService {
             return userRepository.findOne(id);
         }*/
 
-    /* @Transactional(readOnly = true)
+    /* @Transactional
         public Page<User> getPage(int pageNo,int pageSize){
             PageRequest pageRequest=new PageRequest(pageNo-1,pageSize);
             System.out.println("-------------"+userRepository.findAll(pageRequest));

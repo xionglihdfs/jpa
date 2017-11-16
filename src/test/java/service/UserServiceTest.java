@@ -31,13 +31,26 @@ public class UserServiceTest  {
             System.out.println("测试userServiceImpl getUser:" +user.getUsername());
 
     }
+
+    @Test
+    public  void  testInsertServiceTest(){
+        User user=new User();
+        user.setId(100);
+        user.setUsername("test2");
+        user.setPassword("test2");
+        userService.addUser(user);
+
+    }
+
+
+
     @Test
     public void testGoodsServiceTest(){
         // List<Goods> goodsList=goodsService.findListByCateId(2);
         List<User> userList=userService.findAll();
         for(int i=0;i<userList.size();i++) {
             User user=userList.get(i);
-            System.out.println("测试userServiceImpl:" +user.getUsername()+"  id="+user.getId());
+//            System.out.println("测试userServiceImpl:" +user.getUsername()+"  id="+user.getPassword());
         }
     }
 

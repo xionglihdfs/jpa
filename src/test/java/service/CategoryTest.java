@@ -13,8 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath*:applicationContext.xml")
 public class CategoryTest {
-
-  /*  @Autowired
+ /*
+   @Autowired
     private CategoryService categoryService;
 
     @Transactional

@@ -7,19 +7,17 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 /**
  * Created by yonghuo.chen on 16/10/13.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath*:applicationContext.xml")
 public class CategoryDaoTest {
+/*
+    @Autowired
+    private Categor categoryDao;
 
-    /*@Autowired
-    private CategoryDao categoryDao;
-
-  *//*  @Transactional
+    @Transactional
     @Test
     public void testFindCategory(String sql){
         List<Category> categoryList =categoryDao.findCategory(" ");
@@ -27,7 +25,7 @@ public class CategoryDaoTest {
             Category category=categoryList.get(i);
             System.out.println("测试categoryDaoImpl:" +category.getName()+"  id="+category.getId());
         }
-    }*//*
+    }
 
     @Transactional
     @Test

@@ -1,5 +1,4 @@
 package com.core.entity;
-import org.springframework.context.annotation.Lazy;
 
 import java.io.Serializable;
 import java.util.Date;

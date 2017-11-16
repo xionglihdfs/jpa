@@ -42,10 +42,13 @@
     <context:property-placeholder location="classpath:jdbc.properties"/>
     <!--配置数据源-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driverClass" value="${driverClassName}"/>
-        <property name="jdbcUrl" value="${jdbcUrl}"/>
-        <property name="user" value="${username}"/>
-        <property name="password" value="${password}"/>
+        <property name="driverClass" value="org.postgresql.Driver"/>
+        <!--<property name="jdbcUrl" value="${jdbcUrl}"/>-->
+        <!--<property name="user" value="${username}"/>-->
+        <!--<property name="password" value="${password}"/>-->
+        <property name="jdbcUrl" value="jdbc:postgresql://192.168.19.119:5432/baihui"/>
+        <property name="user" value="postgres"/>
+        <property name="password" value="postgis"/>
     </bean>
 
     <!--<context:annotation-config/>-->
@@ -82,7 +85,7 @@
         <property name="packagesToScan" value="com.core"/>
 
         <property name="jpaProperties">
-            <props>
+          <props>
                 <!-- <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop> -->
                 <prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</prop>
                 <!-- <prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop> -->
